@@ -8,7 +8,7 @@ public final class MoneroWalletGateway: WalletGateway {
     }
     
     public static var type: WalletType {
-        return .loki
+        return .arqma
     }
     
     public static func fetchWalletsList() -> [WalletIndex] {
@@ -31,7 +31,7 @@ public final class MoneroWalletGateway: WalletGateway {
                 return nil
             }
             
-            return WalletIndex(name: name, type: .loki)
+            return WalletIndex(name: name, type: .arqma)
             }.compactMap({ $0 })
     }
     

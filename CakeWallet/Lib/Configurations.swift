@@ -46,15 +46,15 @@ final class Configurations {
     static var defaultMoneroNode: MoneroNodeDescription {
         #if USE_TESTNET
             NSLog("USING TESTNET NODE")
-            return MoneroNodeDescription(uri: "lokitestnet.com:38157")
+            return MoneroNodeDescription(uri: "")
         #endif
       
-        return MoneroNodeDescription(uri: "imaginary.stream:22023")
+        return MoneroNodeDescription(uri: "node.supportarqma.com:19994")
     }
 
-    static let preDefaultNodeUri = "node.loki-pool.com:18081"
+    static let preDefaultNodeUri = "node.supportarqma.com:19994"
 //    static let defaultNodeUri = "opennode.xmr-tw.org:18089"
 //    static let defaultCurreny = Currency.usd
     
-    static let donactionAddress = "43gN49UjHNdXDgkcWHTxceHNjXBxcKsReSNThGwzHVavHeZ4SSxSCPT8EpD5cbwAWqEqFQw12rsyTJbKGbeXo43SVpPXZ2W"
+    static let donactionAddress = "ar46iCiw5uB7SjnYhL5EJLP1LpqGkZbCcWhWgdbLL1c4DicNuYi3ZeRJPi8FFmEhYnagbxRyaQKyTYBA95JqmPcr1XZytK9o3"
 }

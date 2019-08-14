@@ -9,7 +9,7 @@ extension String {
 }
 
 public struct MoneroAmount: Amount {
-    public let currency: Currency = CryptoCurrency.loki
+    public let currency: Currency = CryptoCurrency.arqma
     public let value: UInt64
     private let numberFormatter: NumberFormatter = {
        let formatter = NumberFormatter()

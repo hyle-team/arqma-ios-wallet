@@ -206,7 +206,7 @@ final class ExchangeActionCreators {
                         return _generalResult
                     })
                     
-                    _rates[.bitcoin]?[.loki] = nil
+                    _rates[.bitcoin]?[.arqma] = nil
                     store.dispatch(ExchangeState.Action.changedRate(_rates))
                 })
                 
@@ -234,7 +234,7 @@ final class ExchangeActionCreators {
                 }
                 
                 let price = 1 / btcprice
-                store.dispatch(ExchangeState.Action.changeRateOnlyFor(.bitcoin, .loki, price))
+                store.dispatch(ExchangeState.Action.changeRateOnlyFor(.bitcoin, .arqma, price))
             })
         }
     }
@@ -378,7 +378,7 @@ final class ExchangeActionCreators {
                 
                 let trade = ExchangeTrade(
                     id: uuid,
-                    inputCurrency: .loki,
+                    inputCurrency: .arqma,
                     outputCurrency: .bitcoin,
                     inputAddress: address,
                     min: MoneroAmount(value: 0),
@@ -458,7 +458,7 @@ final class ExchangeActionCreators {
                     case .bitcoin:
                         min = BitcoinAmount(value: minAmount)
                         max = BitcoinAmount(value: maxAmount)
-                    case .loki:
+                    case .arqma:
                         min = MoneroAmount(value: UInt64(minAmount))
                         max = MoneroAmount(value: UInt64(maxAmount))
                     case .bitcoinCash, .dash, .liteCoin:
@@ -523,7 +523,7 @@ final class ExchangeActionCreators {
 //            return EDAmount(from: stringAmount, currency: crypto)
 //        case .ethereum:
 //            return EthereumAmount(from: stringAmount)
-//        case .loki:
+//        case .arqma:
 //            return MoneroAmount(from: stringAmount)
 //        }
 //    }
@@ -661,7 +661,7 @@ func makeAmount(from stringAmount: String, for crypto: CryptoCurrency) -> Amount
         return EDAmount(from: stringAmount, currency: crypto)
     case .ethereum:
         return EthereumAmount(from: stringAmount)
-    case .loki:
+    case .arqma:
         return MoneroAmount(from: stringAmount)
     }
 }
@@ -674,7 +674,7 @@ func makeAmount(from value: UInt64, for crypto: CryptoCurrency) -> Amount {
         return EDAmount(value: value, currency: crypto)
     case .ethereum:
         return EthereumAmount(value: value)
-    case .loki:
+    case .arqma:
         return MoneroAmount(value: value)
     }
 }
@@ -722,7 +722,7 @@ final class ExchangeViewController: BaseViewController<ExchangeView>, StoreSubsc
     init(store: Store<ApplicationState>, exchangeFlow: ExchangeFlow?) {
         cryptos = CryptoCurrency.all.filter({ $0 != CryptoCurrency.bitcoinCash })
         exchangeActionCreators = ExchangeActionCreators.shared
-        depositCrypto = .loki
+        depositCrypto = .arqma
         receiveCrypto = .bitcoin
         self.exchangeFlow = exchangeFlow
         self.store = store
@@ -869,7 +869,7 @@ final class ExchangeViewController: BaseViewController<ExchangeView>, StoreSubsc
     }
     
     private func onDepositCryptoChange(_ crypto: CryptoCurrency) {
-        if depositCrypto == .loki && receiveCrypto == .bitcoin {
+        if depositCrypto == .arqma && receiveCrypto == .bitcoin {
             contentView.depositView.amountTextField.text = nil
             if let amount = receiveAmount {
                 updateDepositAmount(amount)
@@ -911,7 +911,7 @@ final class ExchangeViewController: BaseViewController<ExchangeView>, StoreSubsc
     }
     
     private func updateLimits() {
-        if depositCrypto == .loki && receiveCrypto == .bitcoin {
+        if depositCrypto == .arqma && receiveCrypto == .bitcoin {
             hideAmountTextFieldForDeposit()
             showAmountTextFieldForReceive()
             setProviderTitle()
@@ -961,7 +961,7 @@ final class ExchangeViewController: BaseViewController<ExchangeView>, StoreSubsc
     }
     
     private func onReceiveCryptoChange(_ crypto: CryptoCurrency) {
-        if depositCrypto == .loki && receiveCrypto == .bitcoin {
+        if depositCrypto == .arqma && receiveCrypto == .bitcoin {
             contentView.depositView.amountTextField.text = nil
             contentView.receiveView.amountTextField.text = nil
         }
@@ -1097,7 +1097,7 @@ final class ExchangeViewController: BaseViewController<ExchangeView>, StoreSubsc
         var title = "Powered by Morphtoken"
         var icon = "morphtoken_logo"
         
-        if receiveCrypto == .bitcoin && depositCrypto == .loki {
+        if receiveCrypto == .bitcoin && depositCrypto == .arqma {
             title = "Powered by XMR.to"
             icon = "xmr_to_logo"
         }
@@ -1138,7 +1138,7 @@ final class ExchangeViewController: BaseViewController<ExchangeView>, StoreSubsc
     
     @objc
     private func exhcnage() {
-        let isInversed = depositCrypto == .loki && receiveCrypto == .bitcoin
+        let isInversed = depositCrypto == .arqma && receiveCrypto == .bitcoin
         
         let refundAddress = store.state.walletState.walletType.currency == depositCrypto
             ? store.state.walletState.address

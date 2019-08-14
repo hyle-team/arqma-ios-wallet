@@ -92,7 +92,7 @@ final class AddressView: BaseFlexView {
                 switch crypto {
                 case .bitcoin:
                     uri = BitcoinQRResult(uri: value)
-                case .loki:
+                case .arqma:
                     uri = MoneroQRResult(uri: value)
                 default:
                     uri = DefaultCryptoQRResult(uri: value, for: crypto)

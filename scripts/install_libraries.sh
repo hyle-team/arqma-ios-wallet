@@ -19,8 +19,8 @@ SODIUM_PATH="$LIBRARY_DIR/sodium"
 LMDB_DIR_URL="https://github.com/LMDB/lmdb.git"
 LMDB_DIR_PATH="$LIBRARY_DIR/../lmdb/Sources"
 
-LOKI_URL="https://github.com/loki-project/loki.git"
-LOKI_DIR_PATH="$LIBRARY_DIR/loki"
+ARQMA_URL="https://github.com/arqma/arqma.git"
+ARQMA_DIR_PATH="$LIBRARY_DIR/arqma"
 
 echo "============================ ZMQ ============================"
 if [ ! -f $ZMQ_PATH ]; then
@@ -56,9 +56,9 @@ cd $SODIUM_PATH
 ./dist-build/ios.sh
 cd $LIBRARY_DIR
 
-echo "============================ LOKI ============================"
+echo "============================ ARQMA ============================"
 
-echo "Cloning loki from - $LOKI_URL to - $LOKI_DIR_PATH"
-git clone --recursive $LOKI_URL $LOKI_DIR_PATH
+echo "Cloning Arqma from - $ARQMA_URL to - $ARQMA_DIR_PATH"
+git clone --recursive -b release-v0.4.0.0 $ARQMA_URL $ARQMA_DIR_PATH
 
 echo -e "\n Finished installing libraries"

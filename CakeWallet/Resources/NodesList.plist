@@ -4,29 +4,21 @@
 <array>
 	<dict>
 		<key>uri</key>
-		<string>doopool.xyz:22020</string>
+		<string>eu.supportarqma.com:19994</string>
 	</dict>
 	<dict>
 		<key>uri</key>
-		<string>daemons.cryptopool.space:22023</string>
+		<string>us.supportarqma.com:19994</string>
 	</dict>
 	<dict>
 		<key>uri</key>
-		<string>node.loki-pool.com:18081</string>
+		<string>jp.supportarqma.com:19994</string>
 	</dict>
 	<dict>
 		<key>isDefault</key>
 		<true/>
 		<key>uri</key>
-		<string>imaginary.stream:22023</string>
-	</dict>
-	<dict>
-		<key>uri</key>
-		<string>nodes.hashvault.pro:22023</string>
-	</dict>
-	<dict>
-		<key>uri</key>
-		<string>rpc.stakeit.io:22023</string>
+		<string>node.supportarqma.com:19994</string>
 	</dict>
 </array>
 </plist>

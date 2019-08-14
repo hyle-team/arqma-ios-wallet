@@ -37,7 +37,7 @@ final class CreateWalletViewController: BaseViewController<CreateWalletView> {
     @objc
     private func onContinueHandler() {
         let name = self.name
-        let type = WalletType.loki
+        let type = WalletType.arqma
         let title = NSLocalizedString("creating_wallet", comment: "")
             + " "
             + name

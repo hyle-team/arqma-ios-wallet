@@ -6,8 +6,8 @@ import SwiftSoup
 private let minDate: Date? = {
     var minDateComponents = DateComponents()
     minDateComponents.year = 2018
-    minDateComponents.month = 5
-    minDateComponents.day = 3
+    minDateComponents.month = 6
+    minDateComponents.day = 14
     return Calendar.current.date(from: minDateComponents)
 }()
 
@@ -18,20 +18,17 @@ private let dates: [Date: UInt64] = {
     // Loki: These are just estimated block heights, not actual ones
     // The estimates here are the block heights at the start of each month
     return [
-        formatter.date(from: "2018-05")!: 0,
-        formatter.date(from: "2018-06")!: 21166,
-        formatter.date(from: "2018-07")!: 42671,
-        formatter.date(from: "2018-08")!: 64925,
-        formatter.date(from: "2018-09")!: 87178,
-        formatter.date(from: "2018-10")!: 108687,
-        formatter.date(from: "2018-11")!: 130933,
-        formatter.date(from: "2018-12")!: 152455,
-        formatter.date(from: "2019-01")!: 174685,
-        formatter.date(from: "2019-02")!: 196908,
-        formatter.date(from: "2019-03")!: 217021,
-        formatter.date(from: "2019-04")!: 239351,
-        formatter.date(from: "2019-05")!: 260947,
-        formatter.date(from: "2019-06")!: 283215
+        formatter.date(from: "2018-06")!: 0,
+        formatter.date(from: "2018-07")!: 6000,
+        formatter.date(from: "2018-08")!: 17000,
+        formatter.date(from: "2018-09")!: 28000,
+        formatter.date(from: "2018-10")!: 39000,
+        formatter.date(from: "2018-11")!: 49000,
+        formatter.date(from: "2018-12")!: 60000,
+        formatter.date(from: "2019-02")!: 109000,
+        formatter.date(from: "2019-03")!: 130000,
+        formatter.date(from: "2019-04")!: 145000,
+        formatter.date(from: "2019-05")!: 170000
     ]
 }()
 

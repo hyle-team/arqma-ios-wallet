@@ -42,7 +42,7 @@ private func getSavedNode() -> NodeDescription? {
 private func getSavedIsAutoSwitchNodeOn() -> Bool {
     
     return false
-    /* Loki - Disable auto switching
+    /* Arqma - Disable auto switching
     return UserDefaults.standard.value(forKey: Configurations.DefaultsKeys.autoSwitchNode.string()) != nil
         ? UserDefaults.standard.bool(forKey: Configurations.DefaultsKeys.autoSwitchNode)
         : true
@@ -60,7 +60,7 @@ let store = Store<ApplicationState>(
             address: "",
             seed: "",
             isWatchOnly: true,
-            walletType: .loki,
+            walletType: .arqma,
             walletKeys: nil,
             stage: .none
         ), walletsState: WalletsState(
