@@ -25,7 +25,7 @@ ARQMA_DIR_PATH="$LIBRARY_DIR/arqma"
 echo "============================ ZMQ ============================"
 if [ ! -f $ZMQ_PATH ]; then
     echo "Installing ZMQ"
-    curl $ZMQ_DL_PATH -o $ZMQ_PATH
+    curl $ZMQ_URL -o $ZMQ_PATH
 else
     echo "ZMQ already installed"
 fi
@@ -59,6 +59,6 @@ cd $LIBRARY_DIR
 echo "============================ ARQMA ============================"
 
 echo "Cloning Arqma from - $ARQMA_URL to - $ARQMA_DIR_PATH"
-git clone --recursive -b release-v0.4.0.0 $ARQMA_URL $ARQMA_DIR_PATH
+git clone --recursive $ARQMA_URL $ARQMA_DIR_PATH
 
 echo -e "\n Finished installing libraries"

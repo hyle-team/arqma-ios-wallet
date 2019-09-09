@@ -29,8 +29,8 @@ public struct MoneroAmount: Amount {
         if splitResult.count > 1 {
             let afterDot = splitResult[1]
 
-            if afterDot.count > 12 {
-                _string = "0." + String(String(afterDot)[0..<13])
+            if afterDot.count > 9 {
+                _string = "0." + String(String(afterDot)[0..<10])
             } else {
                 _string = string
             }
