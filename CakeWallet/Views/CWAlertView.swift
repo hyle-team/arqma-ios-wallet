@@ -188,11 +188,11 @@ class CWBaseAlertView: BaseFlexView {
         contentView.layer.masksToBounds = false
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
-        titleLabel.textColor = UIColor.lokiGreen
+        titleLabel.textColor = UIColor.arqmaBlue
         contentView.layer.shadowRadius = 20
         contentView.layer.shadowOffset = CGSize(width: 2, height: 1)
         contentView.layer.shadowOpacity = 0.3
-        contentView.layer.shadowColor = UIColor.lokiBlack50.cgColor
+        contentView.layer.shadowColor = UIColor.arqmaBlack50.cgColor
         //        actionsStackView.distribution = .fill
         //        actionsStackView.alignment = .fill
     }

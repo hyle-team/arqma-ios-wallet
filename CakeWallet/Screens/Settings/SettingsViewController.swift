@@ -63,7 +63,7 @@ final class SwitchView: BaseView {
         super.configureView()
         onValueChange(withAnimation: false)
         let onTapGesture = UITapGestureRecognizer(target: self, action: #selector(onTapHandler))
-        backgroundColor = .lokiBlack40
+        backgroundColor = .arqmaBlack40
         layer.masksToBounds = false
         indicatorImageView.layer.masksToBounds = false
         indicatorView.addSubview(indicatorImageView)
@@ -96,7 +96,7 @@ final class SwitchView: BaseView {
         
         if isOn {
             image = UIImage(named: "check_mark")
-            backgroundColor = .lokiGreen
+            backgroundColor = .arqmaBlue
             let x = frame.size.width - indicatorSize.width - 5
             indicatorFrame = CGRect(origin: CGPoint(x: x, y: 5), size: indicatorSize) //self.indicatorView.frame.size
         } else {

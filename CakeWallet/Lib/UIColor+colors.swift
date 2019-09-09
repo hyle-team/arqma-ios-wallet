@@ -25,39 +25,39 @@ extension UIColor {
         return UIColor(red: 0, green: 185, blue: 252)
     }
     
-    static var greenMalachite: UIColor {
-        return UIColor(red: 39, green: 206, blue: 80)
+    static var blueArq: UIColor {
+        return UIColor(red: 39, green: 57, blue: 206)
     }
     
     static var lightBlueGrey: UIColor {
         return UIColor(red: 224, green: 233, blue: 246)
     }
     
-    static var lokiGreen: UIColor {
-        return UIColor(hex: 0x5BCA5B)
+    static var arqmaBlue: UIColor {
+        return UIColor(hex: 0x080085)
     }
     
-    static var lokiGreenDark: UIColor {
-        return UIColor(hex: 0x419B41)
+    static var arqmaBlueDark: UIColor {
+        return UIColor(hex: 0x00006E)
     }
     
-    static var lokiBlack90: UIColor {
+    static var arqmaBlack90: UIColor {
         return UIColor(hex: 0x0A0A0A)
     }
     
-    static var lokiBlack80: UIColor {
+    static var arqmaBlack80: UIColor {
         return UIColor(hex: 0x252525)
     }
 
-    static var lokiBlack60: UIColor {
+    static var arqmaBlack60: UIColor {
         return UIColor(hex: 0x313131)
     }
     
-    static var lokiBlack50: UIColor {
-        return UIColor.lokiBlack60.lighterColor(percent: 0.35)
+    static var arqmaBlack50: UIColor {
+        return UIColor.arqmaBlack60.lighterColor(percent: 0.35)
     }
     
-    static var lokiBlack40: UIColor {
-        return UIColor.lokiBlack50.lighterColor(percent: 0.2)
+    static var arqmaBlack40: UIColor {
+        return UIColor.arqmaBlack50.lighterColor(percent: 0.2)
     }
 }

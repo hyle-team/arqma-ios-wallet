@@ -53,7 +53,7 @@ final class SendView: BaseScrollFlexViewWithBottomSection {
 //        rootFlexContainer.backgroundColor = .clear
         estimatedFeeValueLabel.numberOfLines = 0
         estimatedFeeValueLabel.textAlignment = .right
-        cryptoAmountTitleLabel.textColor = .lokiGreen
+        cryptoAmountTitleLabel.textColor = .arqmaBlue
         cryptoAmountTitleLabel.textAlignment = .right
         cryptoAmountValueLabel.textAlignment = .right
         cryptoAmountTextField.keyboardType = .decimalPad

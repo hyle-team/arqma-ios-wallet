@@ -42,8 +42,8 @@ final class NodeTableCell: FlexCell {
     func configure(address: String, isAble: Bool, isCurrent: Bool) {
         addressLabel.text = address
         addressLabel.flex.markDirty()
-        indicatorView.backgroundColor = isAble ? .greenMalachite : .red
-        contentView.backgroundColor = isCurrent ? .lokiBlack40 : Theme.current.tableCell.background
+        indicatorView.backgroundColor = isAble ? .blueArq : .red
+        contentView.backgroundColor = isCurrent ? .arqmaBlack40 : Theme.current.tableCell.background
         addressLabel.textColor = Theme.current.tableCell.text
         contentView.flex.layout()
     }
@@ -87,7 +87,7 @@ final class LangTableCell: FlexCell {
     func configure(lang: Languages, isCurrent: Bool) {
         textLabel?.text = lang.formatted()
         textLabel?.flex.markDirty()
-        contentView.backgroundColor = isCurrent ? .lokiBlack40 : Theme.current.tableCell.background
+        contentView.backgroundColor = isCurrent ? .arqmaBlack40 : Theme.current.tableCell.background
         textLabel?.textColor = Theme.current.tableCell.text
         contentView.flex.layout()
     }

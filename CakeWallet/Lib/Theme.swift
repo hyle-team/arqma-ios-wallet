@@ -14,14 +14,14 @@ enum Theme: String {
     }
     
     var bar: BarColorScheme {
-        let darkened = UIColor.lokiBlack80.darkerColor(percent: 0.3)
-        return BarColorScheme(barTint: darkened, tint: .lokiGreen, text: .white)
+        let darkened = UIColor.arqmaBlack80.darkerColor(percent: 0.3)
+        return BarColorScheme(barTint: darkened, tint: .arqmaBlue, text: .white)
     }
     
     var container: ContainerColorScheme {
         switch self {
         case .def:
-            return ContainerColorScheme(background: .lokiBlack80)
+            return ContainerColorScheme(background: .arqmaBlack80)
         case .night:
             return ContainerColorScheme(background: .wildDarkBlue)
         }
@@ -30,9 +30,9 @@ enum Theme: String {
     var primaryButton: ButtonColorScheme {
         switch self {
         case .def:
-            return ButtonColorScheme(background: .lokiGreen, text: .white, shadow: .lokiGreenDark)
+            return ButtonColorScheme(background: .arqmaBlue, text: .white, shadow: .arqmaBlueDark)
         case .night:
-            return ButtonColorScheme(background: .whiteSmoke, text: .lokiGreen, shadow: .lokiGreenDark)
+            return ButtonColorScheme(background: .whiteSmoke, text: .arqmaBlue, shadow: .arqmaBlueDark)
         }
     }
     
@@ -41,16 +41,16 @@ enum Theme: String {
         case .def:
             return ButtonColorScheme(background: .wildDarkBlue, text: .white, shadow: .wildDarkBlueShadow)
         case .night:
-            return ButtonColorScheme(background: .whiteSmoke, text: .wildDarkBlue, shadow: .lokiGreenDark)
+            return ButtonColorScheme(background: .whiteSmoke, text: .wildDarkBlue, shadow: .arqmaBlueDark)
         }
     }
     
     var tertiaryButton: ButtonColorScheme {
-        return ButtonColorScheme(background: .lokiBlack60, text: .white, shadow: .lokiBlack50)
+        return ButtonColorScheme(background: .arqmaBlack60, text: .white, shadow: .arqmaBlack50)
     }
     
     var pin: PinIndicatorScheme {
-        return PinIndicatorScheme(background: .lokiBlack40, value: .lokiGreen, shadow: .lokiBlack40)
+        return PinIndicatorScheme(background: .arqmaBlack40, value: .arqmaBlue, shadow: .arqmaBlack40)
     }
     
     var pinKey: PinKeyScheme {
@@ -58,11 +58,11 @@ enum Theme: String {
     }
     
     var pinKeyReversed: PinKeyScheme {
-        return PinKeyScheme(background: .lokiBlack40, text: .white, shadow: .lokiBlack40)
+        return PinKeyScheme(background: .arqmaBlack40, text: .white, shadow: .arqmaBlack40)
     }
     
     var card: CardScheme {
-        return CardScheme(background: .lokiBlack60, shadow: .lokiBlack90)
+        return CardScheme(background: .arqmaBlack60, shadow: .arqmaBlack90)
     }
     
     var text: UIColor {
@@ -84,12 +84,12 @@ enum Theme: String {
     }
     
     var progressBar: ProgressBarScheme {
-        return ProgressBarScheme(value: .greenMalachite, background: .lokiBlack40)
+        return ProgressBarScheme(value: .blueArq, background: .arqmaBlack40)
     }
     
     var tableCell: CellColorScheme {
-        let lighter = UIColor.lokiBlack60.lighterColor(percent: 0.3)
-        return CellColorScheme(background: .lokiBlack60, selected: lighter, text: .white, tint: .lokiGreen)
+        let lighter = UIColor.arqmaBlack60.lighterColor(percent: 0.3)
+        return CellColorScheme(background: .arqmaBlack60, selected: lighter, text: .white, tint: .arqmaBlue)
     }
     
     var labelField: LabelFieldScheme {

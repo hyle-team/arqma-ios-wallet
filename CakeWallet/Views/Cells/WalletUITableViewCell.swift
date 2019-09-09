@@ -26,7 +26,7 @@ final class WalletUITableViewCell: FlexCell {
         nameLabel.text = wallet.name
         
         if isCurrent {
-            nameLabel.textColor = .lokiGreen
+            nameLabel.textColor = .arqmaBlue
             accessoryType = .checkmark
         } else {
             nameLabel.textColor = Theme.current.text

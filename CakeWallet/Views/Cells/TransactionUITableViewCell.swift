@@ -63,7 +63,7 @@ final class TransactionUITableViewCell: FlexCell {
         
         if direction == .incoming {
             status = NSLocalizedString("receive", comment: "") // FIXME: Hardcoded value
-            color = .greenMalachite
+            color = .blueArq
             amountPrefix = "+"
             imageView?.image = UIImage(named: "arrow_down_bg")?.resized(to: CGSize(width: 22, height: 22))
         } else {

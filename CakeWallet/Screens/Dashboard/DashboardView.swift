@@ -88,10 +88,10 @@ final class DashboardView: BaseFlexView {
         super.configureView()
         statusLabel.textAlignment = .center
         balanceAmountLabel.textAlignment = .center
-        balanceTitleLabel.textColor = UIColor.lokiGreen
+        balanceTitleLabel.textColor = UIColor.arqmaBlue
         balanceTitleLabel.textAlignment = .center
         unlockedAmountLabel.textAlignment = .center
-        unlockedTitleLabel.textColor = UIColor.lokiGreen
+        unlockedTitleLabel.textColor = UIColor.arqmaBlue
         unlockedTitleLabel.textAlignment = .center
         transactionsTableView.separatorStyle = .none
         tableHeaderView.frame = CGRect(origin: .zero, size: CGSize(width: 0, height: 415))
