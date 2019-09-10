@@ -19,7 +19,7 @@ final class RestoreViewController: BaseViewController<RecoverView> {
         contentView.fromSeedButton.addTarget(self, action: #selector(fromSeed), for: .touchUpInside)
         switch type {
         case .arqma:
-            contentView.cryptoIconImageView.image = UIImage(named: "loki_logo")
+            contentView.cryptoIconImageView.image = UIImage(named: "arqma_logo")
         case .bitcoin:
             break
         }

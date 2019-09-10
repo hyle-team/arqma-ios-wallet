@@ -37,7 +37,7 @@ final class NodesView: BaseFlexView {
         }
         
         rootFlexContainer.flex.define { flex in
-            // Loki - Disable auto node switching
+            // Arqma - Disable auto node switching
             // flex.addItem(autoNodeSwitchContainer).width(100%)
             flex.addItem(table).width(100%)
         }

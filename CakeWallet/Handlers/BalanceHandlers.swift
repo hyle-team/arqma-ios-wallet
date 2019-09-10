@@ -5,7 +5,7 @@ import SwiftyJSON
 import Alamofire
 
 func updateFiatPrice(for crypto: Currency, to fiatCurrency: FiatCurrency, handler: @escaping (Double) -> Void) {
-    // LOKI: We don't want to fetch any fiat prices
+    // Arqma: We don't want to fetch any fiat prices
     handler(0.0);
     return;
 //    guard fiatCurrency != .vef else { // fixme: need to define function above this to call only updateFiatPrice OR updateFiatPriceForVef. And someone kill me please need to extend this.

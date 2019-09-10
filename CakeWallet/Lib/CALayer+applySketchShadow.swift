@@ -2,7 +2,7 @@ import UIKit
 
 extension CALayer {
     func applySketchShadow(color: UIColor = .black, alpha: Float = 0.5, x: CGFloat = 0, y: CGFloat = 2, blur: CGFloat = 4, spread: CGFloat = 0) {
-        // Loki - We don't want any shadows
+        // Arqma - We don't want any shadows
         removeSketchShadow()
         /*
         shadowColor = color.cgColor

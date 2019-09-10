@@ -350,23 +350,19 @@ final class SettingsViewController: BaseViewController<SettingsView>, UITableVie
         let links = [
             [
                 "name": "Website",
-                "link": "https://loki.network"
+                "link": "https://arqma.com"
             ],
             [
                 "name": "Telegram",
-                "link": "https://t.me/LokiCommunity"
+                "link": "https://t.me/joinchat/ILmRXEVOi85CjDGtK8C9zQ"
             ],
             [
                 "name": "Discord",
-                "link": "https://discordapp.com/invite/67GXfD6"
-            ],
-            [
-                "name": "Reddit",
-                "link": "https://www.reddit.com/r/LokiProject"
+                "link": "https://discord.gg/bECdV73"
             ],
             [
                 "name": "Github",
-                "link": "https://github.com/loki-project/loki-ios-wallet"
+                "link": "https://github.com/arqma/arqma-ios-wallet"
             ],
         ]
         

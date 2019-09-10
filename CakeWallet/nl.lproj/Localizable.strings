@@ -1,5 +1,5 @@
 "welcome" = "Welkom bij %@";
-"first_wallet_text" = "De eerste iOS-Wallet voor Loki";
+"first_wallet_text" = "De eerste iOS-Wallet voor Arqma";
 "InsufficientFundsWithAmount" = "Het te versturen bedrag van %@ (bedrag van %@ + toeslag van %@) is groter dan uw saldo van %@.";
 "InsufficientFunds" = "Het te versturen bedrag is groter dan uw saldo van %@.";
 "OverallBalanceWithAmonut" = "Het te versturen bedrag van %@ is groter dan uw saldo van %@.";

@@ -327,7 +327,7 @@ final class DashboardController: BaseViewController<DashboardView>, StoreSubscri
     private func updateCryptoIcon(for walletType: WalletType) {
         switch walletType {
         case .arqma:
-            contentView.cryptoIconView.image = UIImage(named: "loki_logo")
+            contentView.cryptoIconView.image = UIImage(named: "arqma_logo")
         default:
             break
         }

@@ -2,7 +2,7 @@ import UIKit
 import FlexLayout
 import SwiftSoup
 
-// The date when loki was forked from monero
+// The date when Arqma was forked from monero
 private let minDate: Date? = {
     var minDateComponents = DateComponents()
     minDateComponents.year = 2018
@@ -15,7 +15,7 @@ private let dates: [Date: UInt64] = {
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyy-MM"
 
-    // Loki: These are just estimated block heights, not actual ones
+    // Arqma: These are just estimated block heights, not actual ones
     // The estimates here are the block heights at the start of each month
     return [
         formatter.date(from: "2018-06")!: 0,
