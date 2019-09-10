@@ -20,7 +20,7 @@ final class ReceiveViewController: BaseViewController<ReceiveView> {
     var amount: Amount? {
         get {
             if let rawString = contentView.amountTextField.text {
-                return MoneroAmount(from: rawString)
+                return MoneroAmount(from: rawString.replacingOccurrences(of: ",", with: "."))
             }
             
             return nil
