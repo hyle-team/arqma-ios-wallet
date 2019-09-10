@@ -7,13 +7,13 @@
 git clone https://github.com/fotolockr/CakeWallet.git
 ```
 2. Install [homebrew](https://brew.sh/)
-3. Install loki dependencies:
+3. Install arqma dependencies:
 ```sh
 brew install pkgconfig
 brew install cmake
 brew install zeromq
 ```
-4. Build the loki iOS libraries.
+4. Build the arqma iOS libraries.
 ```sh
 ./install.sh
 ./build.sh
@@ -35,9 +35,9 @@ If you get this issue then make sure that boost has been correctly built. You ca
 ### XCode Building problems
 If you're having problems building with Xcode 10 or above then change to the `Legacy Build System`
 
-# TEMP FIX TO BUILD LOKI SHARED LIBRARIES
+# TEMP FIX TO BUILD ARQMA SHARED LIBRARIES
 
-Currently you will fail to build the loki shared libraries because of some errors.
+Currently you will fail to build the arqma shared libraries because of some errors.
 Here are fixes that you should apply:
 
 src/crypto/cn_heavy_hash.hpp:60
@@ -70,7 +70,7 @@ CMakeLists.txt:555
 
 src/wallet/CMakeLists.txt:77
 ```diff
-- if (NOT LOKI_DAEMON_AND_WALLET_ONLY)
+- if (NOT ARQMA_DAEMON_AND_WALLET_ONLY)
 + if (0)
 ```
 
@@ -92,6 +92,4 @@ You can do this by doing the following:
 5. Search "Swift Compiler - Custom Flags"
 6. Add `USE_TESTNET` under `Active Compilation Conditions`
 
-> We use forked the repo of [ofxiOSBoost](https://github.com/Mikunj/ofxiOSBoost/tree/loki). We do this ONLY for more convenient installation process.
-
-
+> We use forked the repo of [ofxiOSBoost](https://github.com/Mikunj/ofxiOSBoost/). We do this ONLY for more convenient installation process.
