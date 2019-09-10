@@ -354,7 +354,7 @@ final class SettingsViewController: BaseViewController<SettingsView>, UITableVie
             ],
             [
                 "name": "Telegram",
-                "link": "https://twitter.com/ArQmA_Network"
+                "link": "https://t.me/joinchat/HNpOMRIiNSoCn0zYrAOofw"
             ],
             [
                 "name": "Discord",
