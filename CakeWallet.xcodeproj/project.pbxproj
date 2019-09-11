@@ -2233,7 +2233,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				HEADER_SEARCH_PATHS = (
-                                        "$(inherited)",
+					"$(inherited)",
 					"$(PROJECT_DIR)/Libraries/arqma/src",
 					"$(PROJECT_DIR)/Libraries/boost/libs/boost/include",
 					"$(PROJECT_DIR)/Libraries/openssl/include",
@@ -2288,7 +2288,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				HEADER_SEARCH_PATHS = (
-                                        "$(inherited)",
+					"$(inherited)",
 					"$(PROJECT_DIR)/Libraries/arqma/src",
 					"$(PROJECT_DIR)/Libraries/boost/libs/boost/include",
 					"$(PROJECT_DIR)/Libraries/openssl/include",
