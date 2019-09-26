@@ -4,7 +4,7 @@
 
 1. Clone the repository.
 ```sh
-git clone https://github.com/fotolockr/CakeWallet.git
+git clone https://github.com/arqma/arqma-ios-wallet.git
 ```
 2. Install [homebrew](https://brew.sh/)
 3. Install arqma dependencies:
