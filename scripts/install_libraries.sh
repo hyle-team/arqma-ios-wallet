@@ -19,7 +19,7 @@ SODIUM_PATH="$LIBRARY_DIR/sodium"
 LMDB_DIR_URL="https://github.com/LMDB/lmdb.git"
 LMDB_DIR_PATH="$LIBRARY_DIR/../lmdb/Sources"
 
-ARQMA_URL="https://github.com/arqma/arqma.git"
+ARQMA_URL="https://github.com/hyle-team/arqma.git"
 ARQMA_DIR_PATH="$LIBRARY_DIR/arqma"
 
 echo "============================ ZMQ ============================"
