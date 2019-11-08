@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/bash -v
+set -x
 
 SOURCE_DIR=`pwd`
 LIBRARY_DIR="$SOURCE_DIR/Libraries"
@@ -47,6 +48,7 @@ pushd arqma/build/release
 cmake -D IOS=ON -D ARCH=armv7 -D BOOST_LIBRARYDIR=${BOOST_LIBRARYDIR} -D BOOST_INCLUDEDIR=${BOOST_INCLUDEDIR} -D OPENSSL_INCLUDE_DIR=${OPENSSL_INCLUDE_DIR} -D OPENSSL_ROOT_DIR=${OPENSSL_ROOT_DIR} -D CMAKE_BUILD_TYPE=release -D STATIC=ON -D BUILD_GUI_DEPS=ON -D INSTALL_VENDORED_LIBUNBOUND=ON -D SODIUM_LIBRARY=$SODIUM_LIBRARY -D SODIUM_INCLUDE_DIR=$SODIUM_INCLUDE -D CMAKE_INSTALL_PREFIX=$INSTALL_PREFIX  ../..
 make -j4 && make install
 cp $INSTALL_PREFIX/lib/librandomx.a $INSTALL_PREFIX/lib-armv7/librandomx.a
+cp $INSTALL_PREFIX/lib/libminiupnpc.a $INSTALL_PREFIX/lib-armv7/libminiupnpc.a
 popd
 
 echo "Building IOS arm64"
@@ -56,6 +58,7 @@ pushd arqma/build/release
 cmake -D IOS=ON -D ARCH=arm64 -D BOOST_LIBRARYDIR=${BOOST_LIBRARYDIR} -D BOOST_INCLUDEDIR=${BOOST_INCLUDEDIR} -D OPENSSL_INCLUDE_DIR=${OPENSSL_INCLUDE_DIR} -D OPENSSL_ROOT_DIR=${OPENSSL_ROOT_DIR} -D CMAKE_BUILD_TYPE=release -D STATIC=ON -D BUILD_GUI_DEPS=ON -D INSTALL_VENDORED_LIBUNBOUND=ON -D SODIUM_LIBRARY=$SODIUM_LIBRARY -D SODIUM_INCLUDE_DIR=$SODIUM_INCLUDE -D CMAKE_INSTALL_PREFIX=$INSTALL_PREFIX  ../..
 make -j4 && make install
 cp $INSTALL_PREFIX/lib/librandomx.a $INSTALL_PREFIX/lib-armv8-a/librandomx.a
+cp $INSTALL_PREFIX/lib/libminiupnpc.a $INSTALL_PREFIX/lib-armv8-a/libminiupnpc.a
 popd
 
 echo "Building IOS x86"
@@ -65,6 +68,7 @@ pushd arqma/build/release
 cmake -D IOS=ON -D ARCH=x86_64 -D IOS_PLATFORM=SIMULATOR64 -D BOOST_LIBRARYDIR=${BOOST_LIBRARYDIR_x86_64} -D BOOST_INCLUDEDIR=${BOOST_INCLUDEDIR} -D OPENSSL_INCLUDE_DIR=${OPENSSL_INCLUDE_DIR} -D OPENSSL_ROOT_DIR=${OPENSSL_ROOT_DIR} -D CMAKE_BUILD_TYPE=release -D STATIC=ON -D BUILD_GUI_DEPS=ON -D INSTALL_VENDORED_LIBUNBOUND=ON -D SODIUM_LIBRARY=$SODIUM_LIBRARY -D SODIUM_INCLUDE_DIR=$SODIUM_INCLUDE -D CMAKE_INSTALL_PREFIX=$INSTALL_PREFIX  ../..
 make -j4 && make install
 cp $INSTALL_PREFIX/lib/librandomx.a $INSTALL_PREFIX/lib-x86_64/librandomx.a
+cp $INSTALL_PREFIX/lib/libminiupnpc.a $INSTALL_PREFIX/lib-x86_64/libminiupnpc.a
 popd
 
 echo "Creating fat library for armv7 and arm64"
@@ -75,6 +79,7 @@ lipo -create lib-armv7/libunbound.a lib-x86_64/libunbound.a lib-armv8-a/libunbou
 lipo -create lib-armv7/libepee.a lib-x86_64/libepee.a lib-armv8-a/libepee.a -output lib-ios/libepee.a
 lipo -create lib-armv7/libeasylogging.a lib-x86_64/libeasylogging.a lib-armv8-a/libeasylogging.a -output lib-ios/libeasylogging.a
 lipo -create lib-armv7/librandomx.a lib-x86_64/librandomx.a lib-armv8-a/librandomx.a -output lib-ios/librandomx.a
+lipo -create lib-armv7/libminiupnpc.a lib-x86_64/libminiupnpc.a lib-armv8-a/libminiupnpc.a -output lib-ios/libminiupnpc.a
 popd
 
 cd ..
